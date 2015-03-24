@@ -68,6 +68,14 @@
   Plugin.prototype.setup = function() {
     this.setupDataOptions();
 
+    // Parse JSON options.
+    if (typeof this.options.toggleProperties == 'string') {
+      this.options.toggleProperties = JSON.parse(this.options.toggleProperties);
+    }
+    if (typeof this.options.toggleOptions == 'string') {
+      this.options.toggleOptions = JSON.parse(this.options.toggleOptions);
+    }
+
     // Get trigger elements.
     if (this.options.triggerSelectorContext) {
       this.$triggers = $(this.options.triggerSelector, this.$element);
@@ -252,10 +260,12 @@
    */
   Plugin.prototype.do = function() {
     this.update();
-    this.$contents.stop().animate(
-      this.options.toggleProperties,
-      this.options.toggleOptions
-    );
+    if (this.isOpen ^ this.$contents.is(':visible')) {
+      this.$contents.stop().animate(
+        this.options.toggleProperties,
+        this.options.toggleOptions
+      );
+    }
   };
 
   /**
@@ -283,9 +293,11 @@
    * Destroy events.
    */
   Plugin.prototype.destroy = function() {
+    this.$element.removeData(pluginName);
     this.$element.off('.' + pluginName);
     this.$triggers.off('.' + pluginName);
     this.$contents.off('.' + pluginName);
+    $global.off('.' + pluginName + this.uid);
   };
 
   /********** End plugin specific code **********/
@@ -301,3 +313,4 @@
     });
   };
 })(jQuery);
+
