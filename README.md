@@ -230,3 +230,6 @@ Available events :
 * `toggle` : toggle the state of an element
 * `destroy` : destroy the plugin instance
 
+## Examples
+
+Examples are available [here](http://tonai.github.io/jquery-contenttoggle/).
