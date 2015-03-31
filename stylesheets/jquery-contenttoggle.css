@@ -3,8 +3,7 @@
   position: relative;
 }
 
-.menu a:hover,
-.menu a:focus {
+.menu a:hover {
   text-decoration: none;
 }
 
