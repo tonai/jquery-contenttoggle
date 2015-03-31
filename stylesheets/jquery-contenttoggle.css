@@ -11,14 +11,14 @@
   display: inline-block;
 }
 
-.menu_item > a {
+.menu__item > a {
   display: inline-block;
   padding: 10px 20px;
   color: #fff;
   background-color: #007edf;
 }
 
-.menu_item:hover > a {
+.menu__item:hover > a {
   color: #fff;
   background-color: #000;
 }
@@ -32,7 +32,7 @@
   margin: 0;
 }
 
-.menu_content > li:hover > a {
+.menu__content > li:hover > a {
   color: #fff;
   background-color: #007edf;
 }
