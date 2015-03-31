@@ -1,0 +1,17 @@
+/********** Menu styles **********/
+.menu {
+  position: relative;
+}
+
+.menu__item {
+  display: inline-block;
+}
+
+.menu__content {
+  position: absolute;
+  display: none;
+}
+
+.no-touch .menu__item:hover > .menu__content {
+  display: block;
+}
