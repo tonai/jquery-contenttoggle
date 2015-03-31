@@ -3,7 +3,8 @@
   position: relative;
 }
 
-.menu a:hover {
+.menu a:hover,
+.menu a:focus {
   text-decoration: none;
 }
 
@@ -19,7 +20,8 @@
   background-color: #007edf;
 }
 
-.menu__item:hover > a {
+.menu__item:hover > a,
+.menu__item.is-open > a {
   color: #fff;
   background-color: #000;
 }
@@ -31,6 +33,7 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+  z-index: 1;
 }
 
 .menu__content > li > a {
