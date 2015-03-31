@@ -1,3 +1,34 @@
+/********** Global styles **********/
+.back {
+  background-color: #0090ff;
+  color: #fff;
+  display: inline-block;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  font-weight: 700;
+  text-align: center;
+  padding: 10px 10px 10px 25px;
+  position: absolute;
+  right: 70px;
+  bottom: -30px;
+}
+
+.back:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 2px 0 0 2px;
+  top: 50%;
+  left: 11px;
+  margin-top: -6px;
+  -webkit-transform: rotateZ(-45deg);
+          transform: rotateZ(-45deg);
+}
+
 /********** Menu styles **********/
 .menu {
   position: relative;
