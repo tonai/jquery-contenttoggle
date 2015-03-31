@@ -3,13 +3,38 @@
   position: relative;
 }
 
+.menu a:hover {
+  text-decoration: none;
+}
+
 .menu__item {
   display: inline-block;
+}
+
+.menu_item > a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007edf;
+}
+
+.menu_item:hover > a {
+  color: #fff;
+  background-color: #000;
 }
 
 .menu__content {
   position: absolute;
   display: none;
+  background-color: #fff;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu_content > li:hover > a {
+  color: #fff;
+  background-color: #007edf;
 }
 
 .no-touch .menu__item:hover > .menu__content {
