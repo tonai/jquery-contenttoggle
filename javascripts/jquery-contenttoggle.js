@@ -1,5 +1,10 @@
-/********** Menu initialization **********/
-$('.js-contentToggle--menu').contentToggle({
+/********** Menu 1 initialization **********/
+$('.js-contentToggle--menu1').contentToggle({
+  globalClose: true
+});
+
+/********** Menu 2 initialization **********/
+$('.js-contentToggle--menu2').contentToggle({
   globalClose: true,
   beforeCallback: function() {
     // Prevent opening the menu if it is already visible with CSS.
