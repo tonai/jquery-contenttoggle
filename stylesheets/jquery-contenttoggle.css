@@ -67,16 +67,16 @@
   padding: 2px 10px;
 }
 
-.menu2 a:hover {
+.no-touch .menu2 a:hover {
   text-decoration: none;
 }
 
-.menu2 .menu__item:hover > a {
+.no-touch .menu2 .menu__item:hover > a {
   color: #fff;
   background-color: #000;
 }
 
-.menu2 .menu__content > li:hover > a {
+.no-touch .menu2 .menu__content > li:hover > a {
   color: #fff;
   background-color: #007edf;
 }
