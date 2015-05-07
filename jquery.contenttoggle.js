@@ -1,6 +1,10 @@
 (function($){
   'use strict';
 
+  /* Plugin constants. */
+  var ENTER_KEY_CODE = 13;
+  var SPACE_KEY_CODE = 32;
+
   /* Plugin variables. */
   var pluginName;
   var defaultOptions = {};
@@ -138,8 +142,13 @@
     // Bind native events on triggers.
     this.$triggers.on('click.' + pluginName, function(event){
       event.preventDefault();
-      event.stopPropagation();
       this.toggle(null, event);
+    }.bind(this));
+    this.$triggers.on('keydown.' + pluginName, function(event){
+      if (event.keyCode == ENTER_KEY_CODE || event.keyCode == SPACE_KEY_CODE) {
+        event.preventDefault();
+        this.toggle(null, event);
+      }
     }.bind(this));
 
     // Bind native events on contents (avoid triggers click event).
