@@ -132,13 +132,6 @@
     this.$element.on('close.' + pluginName, $.proxy(this.toggle, this, false));
     this.$element.on('open.' + pluginName, $.proxy(this.toggle, this, true));
 
-    // Bind native events on main element.
-    if (this.options.globalClose) {
-      this.$element.on(globalEvent + '.' + pluginName, function(event){
-        event.stopPropagation();
-      });
-    }
-
     // Bind native events on triggers.
     this.$triggers.on('click.' + pluginName, function(event){
       event.preventDefault();
