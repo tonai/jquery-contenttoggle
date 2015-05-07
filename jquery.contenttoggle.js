@@ -161,6 +161,7 @@
     this.$contents.each($.proxy(this.initId, this, this.cid, 'contentToggle__content'));
 
     // Init ariacontrols atttribute.
+    this.$triggers.attr('role', 'button');
     this.$triggers.attr('aria-controls', this.cid.join(' '));
 
     // Default plugin state.
