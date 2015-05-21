@@ -1,4 +1,4 @@
-# jquery.contenttoggle
+# jquery-contenttoggle v0.0.1
 
 A jQuery plugin for managing various form of content toggling.
 
