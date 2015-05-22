@@ -134,6 +134,9 @@
     $all.on('toggle.' + pluginName, $.proxy(this.toggle, this, null));
     $all.on('close.' + pluginName, $.proxy(this.toggle, this, false));
     $all.on('open.' + pluginName, $.proxy(this.toggle, this, true));
+    $all.on('isOpen.' + pluginName, function(){
+      return this.isOpen;
+    }.bind(this));
 
     // Bind native events on triggers.
     this.$triggers.on(eventName + '.' + pluginName, function(event){
