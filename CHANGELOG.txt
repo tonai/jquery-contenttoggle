@@ -3,6 +3,7 @@ v0.0.2 :
   changes:
     - Correction of a bug on ipad/iphone when globalClose option is active.
     - All elements (triggers, contents...etc.) are listening to custom events.
+    - Add a custom 'isOpen' event.
 
 v0.0.1 :
   date: 2015-05-21
