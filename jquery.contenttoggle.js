@@ -127,12 +127,13 @@
    */
   Plugin.prototype.bind = function() {
     var eventName = (isIthing && this.options.globalClose)? 'touchstart': 'click';
+    var $all = this.$element.add(this.$triggers).add(this.$contents);
 
-    // Bind custom events on main element.
-    this.$element.on('destroy.' + pluginName, this.destroy.bind(this));
-    this.$element.on('toggle.' + pluginName, $.proxy(this.toggle, this, null));
-    this.$element.on('close.' + pluginName, $.proxy(this.toggle, this, false));
-    this.$element.on('open.' + pluginName, $.proxy(this.toggle, this, true));
+    // Bind custom events on all elements.
+    $all.on('destroy.' + pluginName, this.destroy.bind(this));
+    $all.on('toggle.' + pluginName, $.proxy(this.toggle, this, null));
+    $all.on('close.' + pluginName, $.proxy(this.toggle, this, false));
+    $all.on('open.' + pluginName, $.proxy(this.toggle, this, true));
 
     // Bind native events on triggers.
     this.$triggers.on(eventName + '.' + pluginName, function(event){
