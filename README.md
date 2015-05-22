@@ -11,7 +11,7 @@ Usage examples :
 
 ## Installation
 
-You can get ity with [Bower](http://bower.io/search/?q=jquery-contenttoggle) :
+You can get it with [Bower](http://bower.io/search/?q=jquery-contenttoggle) :
 ```shell
 bower install --save-dev jquery-contenttoggle
 ```
