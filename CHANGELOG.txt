@@ -1,0 +1,8 @@
+v0.0.2 :
+  date: 2015-05-23
+  changes:
+    - Correction of a bug on ipad/iphone when globalClose option is active.
+    - All elements (triggers, contents...etc.) are listening to custom events.
+
+v0.0.1 :
+  date: 2015-05-21

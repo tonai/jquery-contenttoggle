@@ -1,4 +1,4 @@
-# jquery-contenttoggle v0.0.1
+# jquery-contenttoggle v0.0.2
 
 A jQuery plugin for managing various form of content toggling.
 
@@ -53,7 +53,7 @@ Example :
 
 All clicks inside `js-contentToggle` will toggle the content, but all clicks inside `js-contentToggle__content` won't propagate through the DOM.
 
-If you have to specify which links will trigger the toggle action you can use the `js-contentToggle__trigger` class on them (by default).
+If you want to specify which links will trigger the toggle action you can use the `js-contentToggle__trigger` class on them (by default).
 
 Example :
 ```html
@@ -69,7 +69,8 @@ Example :
 
 ### Using `group options`
 
-You can also pass options when instantiating the elements. options are described in the section below :
+You can also pass options when instantiating the elements.  
+Options are described in the section below :
 ```javascript
 $('.js-contentToggle').contentToggle(options);
 ```
@@ -237,12 +238,34 @@ For example opening the first element :
 $('.js-contentToggle').eq(0).trigger('open');
 ```
 
-Available events : 
+Available events :
 * `open` : open an element
 * `close` : close an element
 * `toggle` : toggle the state of an element
 * `destroy` : destroy the plugin instance
 
+Special event :
+* `isOpen` : return the state of an element (`true` or `false`)
+
+To get a return value from an event with jQuery, you can use the [triggerHandler](http://api.jquery.com/triggerHandler/) method.  
+Get the state of the first element :
+```javascript
+if ($('.js-contentToggle').triggerHandler('isOpen')) {
+  console.log('opened');
+} else {
+  console.log('closed');
+}
+```
+
+**Note** : triggerHandler only operate on the first element of matched element.
+
+
 ## Examples
 
 Examples are available [here](http://tonai.github.io/jquery-contenttoggle/).
+
+
+## Release History
+
+See the [CHANGELOG.txt](https://github.com/tonai/jquery-contenttoggle/blob/master/CHANGELOG.txt)
+
