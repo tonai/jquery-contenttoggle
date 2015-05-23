@@ -57,7 +57,7 @@
         <p>Simple menu with classic CSS <code>:hover</code> display for desktop.</p>
         <p>In this case the plugin is useful for compatibility with touch devices and for accessibility.<br/>
         You can try it by navigating with <code>tab</code> and open/close menu with <code>enter</code> or <code>space</code> or use a touch device.</p>
-        <p>To keep the CSS hover functional we need to avoid the menu to open itself, if it has already been opened with CSS.<br/
+        <p>To keep the CSS hover functional we need to avoid the menu to open itself, if it has already been opened with CSS.<br/>
         For that we use the <code>beforeCallback</code> option.</p>
         <p>We also use the <code>toggleOptions.complete</code> option to be remove the <code>display:none</code> style added by jQuery.<br/>
         Because if you don't, you will have problems when opening the menu with the keyboard and then trying to hover the menu.<br/>
@@ -67,7 +67,7 @@
 }</pre>
         <p>But the use of <code>!important</code> is not recommended and it also give me an an opportunity to show you this option.</p>
         <p><strong>Note : </strong>The <code>toggleOptions</code> option is a JavaScript Objects so you will need to redeclare the <code>toggleOptions.duration</code> option if you don't want animations (because of the merging mechanism).<br/>
-        By default this option is set to <code>400</code>ms by the jQuery [animate](http://api.jquery.com/animate/) function, which is overridden by the contentToggle plugin to <code>0</code>.</p>
+        By default this option is set to <code>400</code>(ms) by the jQuery [animate][http://api.jquery.com/animate/] function, which is overridden by the contentToggle plugin to <code>0</code>.</p>
         <p data-height="350" data-theme-id="0" data-slug-hash="wazZMm" data-default-tab="result" data-user="tonai" class='codepen'>See the Pen <a href='http://codepen.io/tonai/pen/wazZMm/'>jQuery contentToggle - Menu example #2</a> by Tony Cabaye (<a href='http://codepen.io/tonai'>@tonai</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
       </section>
