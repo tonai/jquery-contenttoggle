@@ -61,9 +61,9 @@
         <p>We also use the <code>toggleOptions.complete</code> option to be remove the <code>display:none</code> style added by jQuery.<br/>
         Because if you don't, you will have problems when opening the menu with the keyboard and then trying to hover the menu.<br/>
         This can also be fixed by using the following <code>!important</code> CSS declaration :</p>
-<code>.no-touch .menu__item:hover > .menu__content {
+<pre>.no-touch .menu__item:hover > .menu__content {
   display: block !important;
-}</code>
+}</pre>
         <p>But the use of <code>!important</code> is not recommended and it also give me an an opportunity to show you this option.</p>
         <p><strong>Note : </strong>The <code>toggleOptions</code> option is a JavaScript Objects so you will need to redeclare the <code>toggleOptions.duration</code> option if you don't want animations (because of the merging mechanism).<br/>
         By default this option is set to <code>400</code>ms by the jQuery [animate](http://api.jquery.com/animate/) function, which is overridden by the contentToggle plugin to <code>0</code>.</p>
