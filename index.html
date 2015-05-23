@@ -38,10 +38,13 @@
         
         <h3><a id="accordion-example-2" class="anchor" href="#accordion-example-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Accordion example #2</h3>
         <p>Same example with the <code>independent</code> option to <code>true</code>.</p>
+        <p>We also use the <code>toggleOptions.duration</code> option allowing JS animation of the <code>height</code> property (default).</p>
         <p data-height="350" data-theme-id="0" data-slug-hash="dopEpe" data-default-tab="result" data-user="tonai" class='codepen'>See the Pen <a href='http://codepen.io/tonai/pen/dopEpe/'>jQuery contentToggle - Accordion example #2</a> by Tony Cabaye (<a href='http://codepen.io/tonai'>@tonai</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
         
-        <h3><a id="accordion-example-3" class="anchor" href="#accordion-example-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Accordion example #3</h3>
-        <p>Same example using the <code>toggleOptions.duration</code> option allowing JS animation of the <code>height</code> property (default).</p>
+        <h3><a id="tabs-example-1" class="anchor" href="#tabs-example-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tabs example #1</h3>
+        <p>Here a basic example of tabs.</p>
+        <p>Contents are outside of each elements so we need to use the <code>contentSelectorContext</code> to <code>false</code>.<br/>
+        Then use the data option <code>data-content-selector</code> on each elements to link the associated content.</p>
         <p data-height="350" data-theme-id="0" data-slug-hash="dopBGE" data-default-tab="result" data-user="tonai" class='codepen'>See the Pen <a href='http://codepen.io/tonai/pen/dopBGE/'>jQuery contentToggle - Accordion example #3</a> by Tony Cabaye (<a href='http://codepen.io/tonai'>@tonai</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
         
         <h3><a id="menu-example-1" class="anchor" href="#menu-example-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Menu example #1</h3>
@@ -51,8 +54,19 @@
         
         <h3><a id="menu-example-2" class="anchor" href="#menu-example-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Menu example #2</h3>
         <p>Simple menu with classic CSS <code>:hover</code> display for desktop.</p>
-        <p>The plugin is used for the touch device compatibility and accessibility parts.</p>
-        <p>Try it by navigating with <code>tab</code> and open/close menu with <code>enter</code> or <code>space</code> or use a touch device.</p>
+        <p>In this case the plugin is useful for compatibility with touch devices and for accessibility.<br/>
+        You can try it by navigating with <code>tab</code> and open/close menu with <code>enter</code> or <code>space</code> or use a touch device.</p>
+        <p>To keep the CSS hover functional we need to avoid the menu to open itself, if it has already been opened with CSS.<br/
+        For that we use the <code>beforeCallback</code> option.</p>
+        <p>We also use the <code>toggleOptions.complete</code> option to be remove the <code>display:none</code> style added by jQuery.<br/>
+        Because if you don't, you will have problems when opening the menu with the keyboard and then trying to hover the menu.<br/>
+        This can also be fixed by using the following <code>!important</code> CSS declaration :</p>
+<code>.no-touch .menu__item:hover > .menu__content {
+  display: block !important;
+}</code>
+        <p>But the use of <code>!important</code> is not recommended and it also give me an an opportunity to show you this option.</p>
+        <p><strong>Note : </strong>The <code>toggleOptions</code> option is a JavaScript Objects so you will need to redeclare the <code>toggleOptions.duration</code> option if you don't want animations (because of the merging mechanism).<br/>
+        By default this option is set to <code>400</code>ms by the jQuery [animate](http://api.jquery.com/animate/) function, which is overridden by the contentToggle plugin to <code>0</code>.</p>
         <p data-height="350" data-theme-id="0" data-slug-hash="wazZMm" data-default-tab="result" data-user="tonai" class='codepen'>See the Pen <a href='http://codepen.io/tonai/pen/wazZMm/'>jQuery contentToggle - Menu example #2</a> by Tony Cabaye (<a href='http://codepen.io/tonai'>@tonai</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
       </section>
