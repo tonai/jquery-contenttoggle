@@ -1,0 +1,27 @@
+/* Base styles */
+body {
+  background-color: lightgray;
+}
+
+ul {
+  padding: 0 40px;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #007edf;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* Helpers */
+.is-hidden {
+  display: none;
+}
