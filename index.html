@@ -60,7 +60,7 @@
         <h3><a id="menu-example-2" class="anchor" href="#menu-example-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Menu example #2</h3>
         <p>Simple menu with classic CSS <code>:hover</code> display for desktop.</p>
         <p>In this case the plugin is useful for compatibility with touch devices and for accessibility.<br/>
-        You can try it by navigating with <code>tab</code> and open/close menu with <code>enter</code> or <code>space</code> or use a touch device.</p>
+        You can try it by navigating with <code>tab</code> and open/close menu with <code>enter</code> or <code>space</code> or by using a touch device.</p>
         <p>To keep the CSS hover functional we need to avoid the menu to open itself, if it has already been opened with CSS.<br/>
         For that we use the <code>beforeCallback</code> option.</p>
         <p>We also use the <code>toggleOptions.complete</code> option to be remove the <code>display:none</code> style added by jQuery.<br/>
@@ -89,6 +89,19 @@
         <p>Like the content, the accordion triggers are outside the main element, so we use the <code>triggerSelectorContext</code> option to <code>false</code> and the <code>data-content-selector</code> data option to link them together.<br/>
         As you can see you can have multiple triggers for each elements.</p>
         <p data-height="350" data-theme-id="0" data-slug-hash="EjNaYq" data-default-tab="result" data-user="tonai" class='codepen'>See the Pen <a href='http://codepen.io/tonai/pen/EjNaYq/'>jQuery contentToggle - Tabs example #2</a> by Tony Cabaye (<a href='http://codepen.io/tonai'>@tonai</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+        
+        <h3><a id="menu-example-3" class="anchor" href="#menu-example-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tabs example #3</h3>
+        <p>This is an example of a 2 level deep navigation menu.</p>
+        <p>For that we need to have two groups of instances :</p>
+        <ul>
+          <li>The first level items</li>
+          <li>The second level items</li>
+        </ul>
+        <p>But as you can see in the code, we use exactly the same options for both.<br/>
+        This is possible by using the <code>&gt;</code> selector, allowing to select only direct children.</p>
+        <p>We have also set a <code>toggleOptions.duration</code> to enable animation.<br/>
+        But we change the <code>toggleProperties</code> to use more relevant CSS properties in this animation.</p>
+        <p data-height="350" data-theme-id="0" data-slug-hash="VLKqMb" data-default-tab="result" data-user="tonai" class='codepen'>See the Pen <a href='http://codepen.io/tonai/pen/VLKqMb/'>jQuery contentToggle - Menu example #1</a> by Tony Cabaye (<a href='http://codepen.io/tonai'>@tonai</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
         
       </section>
     </div>
