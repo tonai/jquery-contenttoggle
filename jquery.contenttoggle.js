@@ -271,7 +271,7 @@
    */
   Plugin.prototype.do = function() {
     var toggleProperties = {};
-    var action = this.isOpen? 'open': 'hide';
+    var action = this.isOpen? 'show': 'hide';
     
     this.update();
 
