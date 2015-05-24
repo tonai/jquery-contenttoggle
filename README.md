@@ -207,22 +207,23 @@ A class that will be added to the active trigger.
 
 ### toggleProperties & data-toggle-properties
 
-Type: `object` or `string`  
-Default: `{height: 'toggle'}`
+Type: `array` or `string`  
+Default: `[height]`
 
-The properties object to use as first argument to the jQuery `animate` function.
+An array of CSS properties to be toggled.  
+This properties will then be used as first argument of the jQuery `animate(properties, options)` function.
 
 Available properties : `height`, `width` and `opacity` with the `toggle` value.
 More informations [here](http://api.jquery.com/animate/).
 
-If you use a `string` instead of an `object`, the plugin will consider your are passing a serialized JSON.
+If you use a `string` instead of an `array`, the plugin will consider your are passing a serialized JSON.
 
 ### toggleOptions & data-toggle-options
 
 Type: `object` or `string`  
 Default: `{duration: 0}`
 
-The options object to use as second argument to the jQuery `animate` function.
+The options object to be used as second argument of the jQuery `animate(properties, options)` function.
 
 More informations on available options [here](http://api.jquery.com/animate/).
 
