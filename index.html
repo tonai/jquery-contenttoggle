@@ -30,7 +30,8 @@
         <h2><a id="general" class="anchor" href="#general" aria-hidden="true"><span class="octicon octicon-link"></span></a>General</h2>
         <p>This is a page listing some examples for the jquery.contenttoggle plugin.</p>
         <p>More informations about the plugin on the <a href="https://github.com/tonai/jquery-contenttoggle">GitHub project page</a>.</p>
-        <h2><a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h2>
+        
+        <h2><a id="simple-examples" class="anchor" href="#simple-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simple Examples</h2>
         
         <h3><a id="accordion-example-1" class="anchor" href="#accordion-example-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Accordion example #1</h3>
         <p>Simplest example using the default configuration.</p>
@@ -45,7 +46,9 @@
         <p>Here is a basic example of a tabs menu.</p>
         <p>Contents are outside of each elements so we need to use the <code>contentSelectorContext</code> option to <code>false</code>.<br/>
         Then use the data option <code>data-content-selector</code> on each elements to link the associated content.</p>
-        <p>The <code>beforeCallback</code> option is used to prevent the opened tab to be closed by an user action.</p>
+        <p>The <code>beforeCallback</code> option is used to prevent the current tab to be closed by a user action in order to always have an opened tab.</p>
+        <p><strong>Note : </strong> The plugin initialize the default state automaticaly based on the content visibility, so we have removed the <code>is-hidden</code> class on the first content.<br/>
+        You can also use the <code>defaultState</code> or <code>data-default-state</code> option for that.</p>
         <p data-height="350" data-theme-id="0" data-slug-hash="dopBGE" data-default-tab="result" data-user="tonai" class='codepen'>See the Pen <a href='http://codepen.io/tonai/pen/dopBGE/'>jQuery contentToggle - Accordion example #3</a> by Tony Cabaye (<a href='http://codepen.io/tonai'>@tonai</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
         
         <h3><a id="menu-example-1" class="anchor" href="#menu-example-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Menu example #1</h3>
@@ -70,6 +73,14 @@
         By default this option is set to <code>400</code>(ms) by the jQuery [animate][http://api.jquery.com/animate/] function, which is overridden by the contentToggle plugin to <code>0</code>.</p>
         <p data-height="350" data-theme-id="0" data-slug-hash="wazZMm" data-default-tab="result" data-user="tonai" class='codepen'>See the Pen <a href='http://codepen.io/tonai/pen/wazZMm/'>jQuery contentToggle - Menu example #2</a> by Tony Cabaye (<a href='http://codepen.io/tonai'>@tonai</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 
+        <h2><a id="advanced-examples" class="anchor" href="#advanced-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Advanced Examples</h2>
+        
+        <h3><a id="accordion-example-3" class="anchor" href="#accordion-example-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Accordion example #3</h3>
+        <p>Another accordion example with a summary and buttons that controls the contentToggle items.</p>
+        <p>For that we simply trigger the <code>open</code> or <code>close</code> events.</p>
+        <p><strong>Note : </strong>We use the <code>contentSelector</code> option with a <code>+</code> to select the next sibling element as content.<br/>
+        This is possible because the <code>contentSelectorContext</code> option is set to <code>true</code> (by default), thus the main element (<code>.js-contentToggle</code> in this example) is used as start point for evaluating the selector.</p>
+        <p data-height="268" data-theme-id="0" data-slug-hash="vOXwBj" data-default-tab="result" data-user="tonai" class='codepen'>See the Pen <a href='http://codepen.io/tonai/pen/vOXwBj/'>jQuery contentToggle - Accordion example #1</a> by Tony Cabaye (<a href='http://codepen.io/tonai'>@tonai</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
       </section>
     </div>
 
