@@ -57,9 +57,7 @@
     contentSelectorContext: true,
     elementClass: 'is-open',
     triggerClass: 'is-active',
-    toggleProperties: {
-      height: 'toggle'
-    },
+    toggleProperties: ['height'],
     toggleOptions: {
       duration: 0
     }
@@ -272,13 +270,22 @@
    * Perform toggle action.
    */
   Plugin.prototype.do = function() {
+    var toggleProperties = {};
+    var action = this.isOpen? 'open': 'hide';
+    
     this.update();
-    if (this.isOpen ^ this.$contents.is(':visible')) {
-      this.$contents.stop().animate(
-        this.options.toggleProperties,
-        this.options.toggleOptions
-      );
-    }
+
+    $.each(
+      this.options.toggleProperties,
+      function(index, value){
+        toggleProperties[value] = action;
+      }
+    );
+    
+    this.$contents.stop().animate(
+      toggleProperties,
+      this.options.toggleOptions
+    );
   };
 
   /**
