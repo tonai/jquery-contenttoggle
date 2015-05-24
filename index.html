@@ -25,6 +25,7 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
+        
         <h1><a id="jquerycontenttoggle" class="anchor" href="#jquerycontenttoggle" aria-hidden="true"><span class="octicon octicon-link"></span></a>jquery.contenttoggle</h1>
         
         <h2><a id="general" class="anchor" href="#general" aria-hidden="true"><span class="octicon octicon-link"></span></a>General</h2>
@@ -81,6 +82,14 @@
         <p><strong>Note : </strong>We use the <code>contentSelector</code> option with a <code>+</code> to select the next sibling element as content.<br/>
         This is possible because the <code>contentSelectorContext</code> option is set to <code>true</code> (by default), thus the main element (<code>.js-contentToggle</code> in this example) is used as start point for evaluating the selector.</p>
         <p data-height="350" data-theme-id="0" data-slug-hash="QbGWpg" data-default-tab="result" data-user="tonai" class='codepen'>See the Pen <a href='http://codepen.io/tonai/pen/QbGWpg/'>jQuery contentToggle - Accordion example #3</a> by Tony Cabaye (<a href='http://codepen.io/tonai'>@tonai</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+        
+        <h3><a id="tabs-example-2" class="anchor" href="#tabs-example-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tabs example #2</h3>
+        <p>This is a tabs menu that transforms to accordions on small devices.<br/>
+        Try it by resizing your browser.</p>
+        <p>Like the content, the accordion triggers are outside the main element, so we use the <code>triggerSelectorContext</code> option to <code>false</code> and the <code>data-content-selector</code> data option to link them together.<br/>
+        As you can see you can have multiple triggers for each elements.</p>
+        <p data-height="350" data-theme-id="0" data-slug-hash="EjNaYq" data-default-tab="result" data-user="tonai" class='codepen'>See the Pen <a href='http://codepen.io/tonai/pen/EjNaYq/'>jQuery contentToggle - Tabs example #2</a> by Tony Cabaye (<a href='http://codepen.io/tonai'>@tonai</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+        
       </section>
     </div>
 
