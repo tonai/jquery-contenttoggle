@@ -50,7 +50,7 @@
         <p>The <code>beforeCallback</code> option is used to prevent the current tab to be closed by a user action in order to always have an opened tab.</p>
         <p><strong>Note : </strong> The plugin initialize the default state automaticaly based on the content visibility, so we have removed the <code>is-hidden</code> class on the first content.<br/>
         You can also use the <code>defaultState</code> or <code>data-default-state</code> option for that.</p>
-        <p data-height="350" data-theme-id="0" data-slug-hash="dopBGE" data-default-tab="result" data-user="tonai" class='codepen'>See the Pen <a href='http://codepen.io/tonai/pen/dopBGE/'>jQuery contentToggle - Accordion example #3</a> by Tony Cabaye (<a href='http://codepen.io/tonai'>@tonai</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+        <p data-height="350" data-theme-id="0" data-slug-hash="dopBGE" data-default-tab="result" data-user="tonai" class='codepen'>See the Pen <a href='http://codepen.io/tonai/pen/dopBGE/'>jQuery contentToggle - Accordion example #2</a> by Tony Cabaye (<a href='http://codepen.io/tonai'>@tonai</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
         
         <h3><a id="menu-example-1" class="anchor" href="#menu-example-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Menu example #1</h3>
         <p>Make a simple menu by using the <code>globalClose</code> option</p>
@@ -101,8 +101,15 @@
         This is possible by using the <code>&gt;</code> selector, allowing to select only direct children.</p>
         <p>We have also set a <code>toggleOptions.duration</code> to enable animation.<br/>
         But we change the <code>toggleProperties</code> option to use more relevant CSS properties in this animation.</p>
-        <p data-height="350" data-theme-id="0" data-slug-hash="VLKqMb" data-default-tab="result" data-user="tonai" class='codepen'>See the Pen <a href='http://codepen.io/tonai/pen/VLKqMb/'>jQuery contentToggle - Menu example #1</a> by Tony Cabaye (<a href='http://codepen.io/tonai'>@tonai</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+        <p data-height="350" data-theme-id="0" data-slug-hash="VLKqMb" data-default-tab="result" data-user="tonai" class='codepen'>See the Pen <a href='http://codepen.io/tonai/pen/VLKqMb/'>jQuery contentToggle - Menu example #3</a> by Tony Cabaye (<a href='http://codepen.io/tonai'>@tonai</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
         
+        <h3><a id="mobile-menu-example" class="anchor" href="#mobile-menu-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mobile menu example</h3>
+        <p>Example of a mobile menu with a "burger" switch.</p>
+        <p>We have here completely desactivated the JavaScript toggling of the content by setting the <code>toggleProperties</code> option to an empty array <code>[]</code>.<br/>
+        We use the <code>is-open</code> class added by the plugin to build our animations only with CSS transition.<br/>
+        As the menu is not hidden, but only pushed away (<code>$('.menu').is(':visible');</code> returns <code>true</code>), we use the <code>defaultState</code> option to <code>close</code> to force the default state of the plugin.</p>
+        <p data-height="350" data-theme-id="0" data-slug-hash="rVWOzr" data-default-tab="result" data-user="tonai" class='codepen'>See the Pen <a href='http://codepen.io/tonai/pen/rVWOzr/'>jQuery contentToggle - Mobile menu example</a> by Tony Cabaye (<a href='http://codepen.io/tonai'>@tonai</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+
       </section>
     </div>
 
