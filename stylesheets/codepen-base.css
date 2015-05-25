@@ -21,6 +21,10 @@ a:focus {
   text-decoration: underline;
 }
 
+button {
+  cursor: pointer;
+}
+
 /* Helpers */
 .is-hidden {
   display: none;
