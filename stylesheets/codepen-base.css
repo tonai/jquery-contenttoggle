@@ -11,10 +11,13 @@ li {
   list-style-type: none;
 }
 
-a,
-a:hover{
+a {
   text-decoration: none;
   color: #007edf;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 a:focus {
@@ -23,6 +26,7 @@ a:focus {
 
 button {
   cursor: pointer;
+  margin: 0;
 }
 
 /* Helpers */
