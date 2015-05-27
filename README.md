@@ -1,4 +1,4 @@
-# jquery-contenttoggle v0.0.2
+# jquery-contenttoggle v0.1.0
 
 A jQuery plugin for managing various form of content toggling.
 
@@ -98,12 +98,21 @@ Those options should be set on the element matching the selector you will use wh
 
 If you need to dynamically add other elements (using AJAX for example) to an existing group.
 
-You will need to use the same selector when instantiating the plugin like `$('.js-contentToggle').contentToggle(options);`.
+You will need to use the same selector (or with the same group option) when instantiating the plugin like `$('.js-contentToggle').contentToggle(options);`.
 
 It is not a problem if some elements have already been initialized, elements are protected against multiple instantiation.
 
 
 ## Configuration
+
+### group & data-group
+
+Type: `string`  
+Default: is equal to the original jQuery selector used for instantiation, sanitized to keep only following characters : `a-z`, `0-9`, `-` and `_`.
+
+Elements are grouped each other, meaning that only one element can be opened at the same time inside a same group.
+
+You can't instantiate the plugin twice or more on the same element, for the same group.
 
 ### independent & data-independent
 
