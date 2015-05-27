@@ -1,3 +1,8 @@
+v0.1.0 :
+  date: 2015-05-27
+  chages:
+    - Add "group" option.
+
 v0.0.2 :
   date: 2015-05-23
   changes:
