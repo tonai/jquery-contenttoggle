@@ -269,6 +269,21 @@ if ($('.js-contentToggle').triggerHandler('isOpen')) {
 
 **Note** : triggerHandler only operate on the first element of matched element.
 
+If you have multiples instances on the same element (with different groups), you can trigger a specific instance by using the group as namespace.
+Example :
+```javascript
+// First instance (with group 'left-sidebar').
+$('body').contentToggle({
+  group: 'left-sidebar'
+});
+// Second instance (with group 'right-sidebar').
+$('body').contentToggle({
+  group: 'right-sidebar'
+});
+// The following code will only trigger the second instance of contentToggle and open it.
+$('body').trigger('open.right-sidebar');
+```
+
 
 ## Examples
 
