@@ -243,8 +243,9 @@ If you use a `string` instead of an `object`, the plugin will consider your are 
 
 you can trigger custom events to control the plugin instances with JavaScript.
 
-For example opening the first element :
+Example :
 ```javascript
+// Opening the first element.
 $('.js-contentToggle').eq(0).trigger('open');
 ```
 
@@ -257,9 +258,13 @@ Available events :
 Special event :
 * `isOpen` : return the state of an element (`true` or `false`)
 
-To get a return value from an event with jQuery, you can use the [triggerHandler](http://api.jquery.com/triggerHandler/) method.  
-Get the state of the first element :
+To get a return value from an event with jQuery, you can use the [triggerHandler](http://api.jquery.com/triggerHandler/) method.
+
+**Note** : triggerHandler only operate on the first element of matched element.
+
+Example:
 ```javascript
+// Get the state of the first element.
 if ($('.js-contentToggle').triggerHandler('isOpen')) {
   console.log('opened');
 } else {
@@ -267,9 +272,8 @@ if ($('.js-contentToggle').triggerHandler('isOpen')) {
 }
 ```
 
-**Note** : triggerHandler only operate on the first element of matched element.
-
 If you have multiples instances on the same element (with different groups), you can trigger a specific instance by using the group as namespace.
+
 Example :
 ```javascript
 // First instance (with group 'left-sidebar').
