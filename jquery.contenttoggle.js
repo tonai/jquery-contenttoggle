@@ -192,6 +192,7 @@
 
     // Init ariacontrols atttribute.
     this.$triggers.attr('role', 'button');
+    this.$triggers.attr('tabindex', '0');
     this.$triggers.attr('aria-controls', this.cid.join(' '));
 
     // Default plugin state.
