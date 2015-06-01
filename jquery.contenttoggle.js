@@ -182,16 +182,20 @@
    * Initialize default plugin state.
    */
   Plugin.prototype.init = function() {
-    // Init triggers id atttribute.
+    // Initialize triggers IDs.
     this.tid = [];
     this.$triggers.each($.proxy(this.initId, this, this.tid, 'contentToggle__trigger'));
 
-    // Init contents id atttribute.
+    // Initialize contents IDs.
     this.cid = [];
     this.$contents.each($.proxy(this.initId, this, this.cid, 'contentToggle__content'));
 
-    // Init ariacontrols atttribute.
-    this.$triggers.attr('role', 'button');
+    // Initialize triggers attributes.
+    this.$triggers.each(function(index, element){
+      if (element.tagName != 'BUTTON') {
+        this.$triggers.eq(index).attr('role', 'button');
+      }
+    });
     this.$triggers.attr('tabindex', '0');
     this.$triggers.attr('aria-controls', this.cid.join(' '));
 
