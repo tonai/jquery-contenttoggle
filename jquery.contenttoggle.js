@@ -163,7 +163,7 @@
     // Bind native events on triggers.
     this.$triggers.on(eventName + namespaces, function(event){
       event.preventDefault();
-      this.toggle(null, event);
+      event.timeStamp && this.toggle(null, event);
     }.bind(this));
     this.$triggers.on('keydown' + namespaces, function(event){
       if (event.keyCode == ENTER_KEY_CODE || event.keyCode == SPACE_KEY_CODE) {
