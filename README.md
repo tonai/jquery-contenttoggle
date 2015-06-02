@@ -1,11 +1,13 @@
-# jquery-contenttoggle v0.1.0
+# jquery-contenttoggle v0.1.1
 
-A jQuery plugin for managing various form of content toggling.
+A jQuery plugin for managing various kind of content toggling.
+
+This librairy help you create cross-plateform and accessible (in the meaning of the W3C) content that can be shown and hidden with triggers.
 
 Usage examples :
 * Menu
 * Tabs
-* FAQ
+* Accordion
 * ...
 
 
