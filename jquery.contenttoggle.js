@@ -195,7 +195,7 @@
       if (element.tagName != 'BUTTON') {
         this.$triggers.eq(index).attr('role', 'button');
       }
-    });
+    }.bind(this));
     this.$triggers.attr('tabindex', '0');
     this.$triggers.attr('aria-controls', this.cid.join(' '));
 
