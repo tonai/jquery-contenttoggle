@@ -1,6 +1,13 @@
+v0.1.1 :
+  date: 2015-06-03
+  changes:
+    - Add tabindex attribute to triggers for better accessibility.
+    - Remove role="button" for buttons (accessibility requirement).
+    - Correction for firefox when using the space key.
+
 v0.1.0 :
   date: 2015-05-27
-  chages:
+  changes:
     - Add "group" option.
 
 v0.0.2 :
