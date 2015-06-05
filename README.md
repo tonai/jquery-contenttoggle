@@ -1,4 +1,4 @@
-# jQuery-contentToggle v0.1.1
+# jQuery-contentToggle v0.1.2
 
 A jQuery plugin for managing various kind of content toggling.
 
@@ -71,7 +71,7 @@ Example :
 
 ### Using `group options`
 
-You can also pass options when instantiating the elements.  
+You can also pass options when instantiating the elements.
 Options are described in the section below :
 ```javascript
 $('.js-contentToggle').contentToggle(options);
@@ -109,7 +109,7 @@ It is not a problem if some elements have already been initialized, elements are
 
 ### group & data-group
 
-Type: `string`  
+Type: `string`
 Default: is equal to the original jQuery selector used for instantiation, sanitized to keep only following characters : `a-z`, `0-9`, `-` and `_`.
 
 Elements are grouped each other, meaning that only one element can be opened at the same time inside a same group.
@@ -118,7 +118,7 @@ You can't instantiate the plugin twice or more on the same element, for the same
 
 ### independent & data-independent
 
-Type: `boolean`  
+Type: `boolean`
 Default: `false`
 
 If elements inside a group are independent, it breaks the rule of having only one visible content at the same time for a group.
@@ -127,7 +127,7 @@ This is useful for a Frequently Asked Questions list for example.
 
 ### defaultState & data-default-state
 
-Type: `string`  
+Type: `string`
 Default: `null`
 
 Use this option if you want to enforce the default state of an element (`open` or `close`).
@@ -142,7 +142,7 @@ If your elements are not independent, use one `data option` on the element you w
 
 ### globalClose & data-global-close
 
-Type: `boolean`  
+Type: `boolean`
 Default: `false`
 
 When setting this option to `true` a `click` event listener will be added to the `document` with the associated action of closing all elements.
@@ -153,7 +153,7 @@ This is useful for a mobile compatible menu for example.
 
 ### beforeCallback & data-before-callback
 
-Type: `function` or `string`  
+Type: `function` or `string`
 Default: `null`
 
 A function to be called before an action (`toggle`, `open` or `close`).
@@ -166,14 +166,14 @@ If you use a `string` instead of a `function`, the plugin will search for a `fun
 
 ### triggerSelector & data-trigger-selector
 
-Type: `string`  
+Type: `string`
 Default: `.js-contentToggle__trigger`
 
 The selector of the triggers.
 
 ### triggerSelectorContext & data-trigger-selector-context
 
-Type: `boolean`  
+Type: `boolean`
 Default: `true`
 
 If `true` the main element will be used as context for the query selector like this :
@@ -185,14 +185,14 @@ Set it to `false` if you want to use triggers outside of the main element.
 
 ### contentSelector & data-content-selector
 
-Type: `string`  
+Type: `string`
 Default: `.js-contentToggle__content`
 
 The selector of the contents.
 
 ### contentSelectorContext & data-content-selector-context
 
-Type: `boolean`  
+Type: `boolean`
 Default: `true`
 
 If `true` the main element will be used as context for the query selector like this :
@@ -204,24 +204,24 @@ Set it to `false` if you want to use contents outside of the main element.
 
 ### elementClass & data-element-class
 
-Type: `string`  
+Type: `string`
 Default: `is-open`
 
 A class that will be added to the main element when its state is open.
 
 ### triggerClass & data-trigger-class
 
-Type: `string`  
+Type: `string`
 Default: `is-active`
 
 A class that will be added to the active trigger.
 
 ### toggleProperties & data-toggle-properties
 
-Type: `array` or `string`  
+Type: `array` or `string`
 Default: `[height]`
 
-An array of CSS properties to be toggled.  
+An array of CSS properties to be toggled.
 This properties will then be used as first argument of the jQuery `animate(properties, options)` function.
 
 Available properties : `height`, `width` and `opacity` with the `toggle` value.
@@ -231,7 +231,7 @@ If you use a `string` instead of an `array`, the plugin will consider your are p
 
 ### toggleOptions & data-toggle-options
 
-Type: `object` or `string`  
+Type: `object` or `string`
 Default: `{duration: 0}`
 
 The options object to be used as second argument of the jQuery `animate(properties, options)` function.
