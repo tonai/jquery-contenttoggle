@@ -14,7 +14,7 @@
   var sanitize = /[^a-z0-9_-]/gi;
   var uid = 0;
   var gid = 0;
-  
+
   /* Plugin default options. */
   defaultOptions = {
     defaultState: null,
@@ -45,7 +45,7 @@
    */
   function Plugin(element, selector, options) {
     var data;
-    
+
     // Merge specific and default options.
     this.options = {
       group: selector
@@ -58,7 +58,7 @@
 
     // Data initialization.
     this.setup();
-    
+
     // Empty object initialization.
     data = this.$element.data(pluginName);
     if (!instances[this.options.group]) {
@@ -67,14 +67,14 @@
     if (!data) {
       data = {};
     }
-    
+
     // Check if instance has not been already initialized.
     if (!data[this.options.group]) {
       // Save the new instance.
       instances[this.options.group][this.uid] = this;
       data[this.options.group] = this;
       this.$element.data(pluginName, data);
-      
+
       // Plugin initialization.
       this.bind();
       this.init();
@@ -87,7 +87,7 @@
    */
   Plugin.prototype.setup = function() {
     this.setupDataOptions();
-    
+
     // Sanitize group name.
     if (this.options.group) {
       this.options.group = this.options.group.toString().replace(sanitize, '');
@@ -195,11 +195,14 @@
 
     // Initialize triggers attributes.
     this.$triggers.each(function(index, element){
-      if (element.tagName != 'BUTTON') {
-        this.$triggers.eq(index).attr('role', 'button');
+      var $trigger = this.$triggers.eq(index);
+      if (!$trigger.attr('role') && element.tagName != 'BUTTON') {
+        $trigger.attr('role', 'button');
+      }
+      if (!$trigger.attr('tabindex')) {
+        $trigger.attr('tabindex', '0');
       }
     }.bind(this));
-    this.$triggers.attr('tabindex', '0');
     this.$triggers.attr('aria-controls', this.cid.join(' '));
 
     // Default plugin state.
@@ -233,7 +236,7 @@
    */
   Plugin.prototype.toggle = function(state, event) {
     event.stopPropagation();
-    
+
     if (typeof state != 'boolean') {
       state = !this.isOpen;
     }
@@ -308,7 +311,7 @@
   Plugin.prototype.do = function() {
     var toggleProperties = {};
     var action = this.isOpen? 'show': 'hide';
-    
+
     this.update();
 
     $.each(
@@ -317,7 +320,7 @@
         toggleProperties[value] = action;
       }
     );
-    
+
     this.$contents.stop().animate(
       toggleProperties,
       this.options.toggleOptions
