@@ -191,6 +191,8 @@ Default: `.js-contentToggle__trigger`
 
 The selector of the triggers.
 
+If no elements match, the triggers will be equals to the main element.
+
 ### triggerSelectorContext & data-trigger-selector-context
 
 Type: `boolean`
@@ -202,6 +204,22 @@ this.$triggers = $(this.options.triggerSelector, this.$element);
 ```
 
 Set it to `false` if you want to use triggers outside of the main element.
+
+### labelSelector & data-label-selector
+
+Type: `string`
+Default: `null`
+
+The selector of the labels.
+
+If null, labels are equals to triggers.
+
+### labelSelectorContext & data-label-selector-context
+
+Type: `boolean`
+Default: `true`
+
+Same as [triggerSelectorContext & data-trigger-selector-context](https://github.com/tonai/jquery-contenttoggle#triggerselectorcontext--data-trigger-selector-context) but for labels.
 
 ### contentSelector & data-content-selector
 
@@ -215,12 +233,7 @@ The selector of the contents.
 Type: `boolean`
 Default: `true`
 
-If `true` the main element will be used as context for the query selector like this :
-```javascript
-this.$contents = $(this.options.contentSelector, this.$element);
-```
-
-Set it to `false` if you want to use contents outside of the main element.
+Same as [triggerSelectorContext & data-trigger-selector-context](https://github.com/tonai/jquery-contenttoggle#triggerselectorcontext--data-trigger-selector-context) but for contents.
 
 ### elementClass & data-element-class
 
@@ -235,6 +248,20 @@ Type: `string`
 Default: `is-active`
 
 A class that will be added to the active trigger.
+
+### openedLabel & data-opened-label
+
+Type: `string`
+Default: `null`
+
+If not null, the labels will be updated with that value when the state is opened (HTML allowed).
+
+### closedLabel & data-closed-label
+
+Type: `string`
+Default: `null`
+
+If not null, the labels will be updated with that value when the state is closed (HTML allowed).
 
 ### toggleProperties & data-toggle-properties
 
