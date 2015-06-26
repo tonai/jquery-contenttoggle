@@ -2,10 +2,7 @@
   'use strict';
 
   /* Plugin constants. */
-  var TRIGGER_KEY_CODES = {
-    enter: 13,
-    space: 32
-  };
+  var TRIGGER_KEY_CODES = [13 /*enter*/, 32 /*space*/];
   var AVAILABLE_ROLE_BUTTON_TAGS = ['a', 'div', 'figure', 'p', 'pre',
                                     'blockquote', 'img', 'ins', 'del',
                                     'output', 'span', 'summary'];
@@ -174,7 +171,7 @@
       }
     }.bind(this));
     this.$triggers.on('keydown' + namespaces, function(event){
-      if (TRIGGER_KEY_CODES.indexOf(event.keyCode) !== -1) {
+      if ($.inArray(event.keyCode, TRIGGER_KEY_CODES) !== -1) {
         event.preventDefault();
         this.toggle(null, event);
       }
@@ -202,7 +199,7 @@
     this.$triggers.each(function(index, element){
       var $trigger = this.$triggers.eq(index);
       if (!$trigger.attr('role') &&
-          AVAILABLE_ROLE_BUTTON_TAGS.indexOf(element.tagName.toLowerCase()) !== -1) {
+          $.inArray(element.tagName.toLowerCase(), AVAILABLE_ROLE_BUTTON_TAGS) !== -1) {
         $trigger.attr('role', 'button');
       }
       if (!$trigger.attr('tabindex')) {
