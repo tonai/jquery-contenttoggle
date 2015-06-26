@@ -25,10 +25,14 @@
     beforeCallback: null,
     triggerSelector: '.js-contentToggle__trigger',
     triggerSelectorContext: true,
+    labelSelector: null,
+    labelSelectorContext: true,
     contentSelector: '.js-contentToggle__content',
     contentSelectorContext: true,
     elementClass: 'is-open',
     triggerClass: 'is-active',
+    openedLabel: null,
+    closedLabel: null,
     toggleProperties: ['height'],
     toggleOptions: {
       duration: 0
@@ -111,6 +115,17 @@
     }
     if (this.$triggers.length === 0) {
       this.$triggers = this.$element;
+    }
+
+    // Get labels elements.
+    if (this.options.labelSelector) {
+      if (this.options.labelSelectorContext) {
+        this.$labels = $(this.options.labelSelector, this.$element);
+      } else {
+        this.$labels = $(this.options.labelSelector);
+      }
+    } else {
+      this.$labels = this.$triggers;
     }
 
     // Get content elements.
@@ -343,11 +358,17 @@
       } else {
         this.$triggers.addClass(this.options.triggerClass);
       }
+      if (typeof this.options.openedLabel == 'string') {
+        this.$labels.html(this.options.openedLabel);
+      }
     } else {
       this.$element.removeClass(this.options.elementClass);
       this.$contents.attr('aria-hidden', true);
       this.$triggers.attr('aria-expanded', false);
       this.$triggers.removeClass(this.options.triggerClass);
+      if (typeof this.options.closedLabel == 'string') {
+        this.$labels.html(this.options.closedLabel);
+      }
     }
   };
 
