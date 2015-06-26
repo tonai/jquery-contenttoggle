@@ -45,7 +45,7 @@ Example :
 ```html
 <div class="js-contentToggle">
   <div>
-    <a href="#">Toggle !</a>
+    <button type="button">Toggle !</button>
     <div class="js-contentToggle__content">
       <p>Lorem ipsum dolor sit amet.</p>
     </div>
@@ -61,7 +61,8 @@ Example :
 ```html
 <div class="js-contentToggle">
   <div>
-    <a href="#" class="js-contentToggle__trigger">Toggle !</a> - <a href="#">Don't toggle !</a>
+    <button type="button" class="js-contentToggle__trigger">Toggle !</button>
+    <button type="button">Don't toggle !</button>
     <div class="js-contentToggle__content">
       <p>Lorem ipsum dolor sit amet.</p>
     </div>
@@ -104,6 +105,25 @@ You will need to use the same selector (or with the same group option) when inst
 
 It is not a problem if some elements have already been initialized, elements are protected against multiple instantiation.
 
+### Accessibility recommendations
+
+It's preferable to use a `button` with `type="button"` as triggers, because it implicitly gets the button wai-aria role.
+
+Following HTML tags are also accepted (they will get the attribute `role="button"`) :
+* a
+* div
+* figure
+* p
+* pre
+* blockquote
+* img (with alt="some text")
+* ins
+* del
+* output
+* span
+* summary
+
+More informations on roles [here](http://www.w3.org/TR/html-aria/#document-conformance-requirements-for-use-of-aria-attributes-in-html).
 
 ## Configuration
 
