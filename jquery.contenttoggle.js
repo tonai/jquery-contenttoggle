@@ -2,8 +2,10 @@
   'use strict';
 
   /* Plugin constants. */
-  var ENTER_KEY_CODE = 13;
-  var SPACE_KEY_CODE = 32;
+  var TRIGGER_KEY_CODES = {
+    enter: 13,
+    space: 32
+  };
   var AVAILABLE_ROLE_BUTTON_TAGS = ['a', 'div', 'figure', 'p', 'pre',
                                     'blockquote', 'img', 'ins', 'del',
                                     'output', 'span', 'summary'];
@@ -172,7 +174,7 @@
       }
     }.bind(this));
     this.$triggers.on('keydown' + namespaces, function(event){
-      if (event.keyCode == ENTER_KEY_CODE || event.keyCode == SPACE_KEY_CODE) {
+      if (TRIGGER_KEY_CODES.indexOf(event.keyCode) !== -1) {
         event.preventDefault();
         this.toggle(null, event);
       }
