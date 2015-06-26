@@ -4,6 +4,9 @@
   /* Plugin constants. */
   var ENTER_KEY_CODE = 13;
   var SPACE_KEY_CODE = 32;
+  var AVAILABLE_ROLE_BUTTON_TAGS = ['a', 'div', 'figure', 'p', 'pre',
+                                    'blockquote', 'img', 'ins', 'del',
+                                    'output', 'span', 'summary'];
 
   /* Plugin variables. */
   var pluginName  = 'contentToggle';
@@ -196,7 +199,8 @@
     // Initialize triggers attributes.
     this.$triggers.each(function(index, element){
       var $trigger = this.$triggers.eq(index);
-      if (!$trigger.attr('role') && element.tagName != 'BUTTON') {
+      if (!$trigger.attr('role') &&
+          AVAILABLE_ROLE_BUTTON_TAGS.indexOf(element.tagName.toLowerCase()) !== -1) {
         $trigger.attr('role', 'button');
       }
       if (!$trigger.attr('tabindex')) {
