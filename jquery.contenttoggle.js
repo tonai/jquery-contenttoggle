@@ -22,6 +22,7 @@
     defaultState: null,
     globalClose: false,
     independent: false,
+    noSelfClosing: false,
     beforeCallback: null,
     triggerSelector: '.js-contentToggle__trigger',
     triggerSelectorContext: true,
@@ -269,7 +270,7 @@
          this.options.beforeCallback(event))) {
       if (state) {
         this.open();
-      } else {
+      } else if (!this.options.noSelfClosing) {
         this.close();
       }
     }
