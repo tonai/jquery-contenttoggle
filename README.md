@@ -145,6 +145,15 @@ If elements inside a group are independent, it breaks the rule of having only on
 
 This is useful for a Frequently Asked Questions list for example.
 
+### noSelfClosing & data-no-self-closing
+
+Type: `boolean`
+Default: `false`
+
+If true the element will not close if the close request comes from itself.
+
+This option helps for creating tabs style instances.
+
 ### defaultState & data-default-state
 
 Type: `string`
