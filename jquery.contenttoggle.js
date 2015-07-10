@@ -15,7 +15,6 @@
   var isIthing = navigator.userAgent.match(/iPad|iPhone/i);
   var sanitize = /[^a-z0-9_-]/gi;
   var uid = 0;
-  var gid = 0;
 
   /* Plugin default options. */
   defaultOptions = {
@@ -101,10 +100,10 @@
     }
 
     // Parse JSON options.
-    if (typeof this.options.toggleProperties == 'string') {
+    if (typeof this.options.toggleProperties === 'string') {
       this.options.toggleProperties = JSON.parse(this.options.toggleProperties);
     }
-    if (typeof this.options.toggleOptions == 'string') {
+    if (typeof this.options.toggleOptions === 'string') {
       this.options.toggleOptions = JSON.parse(this.options.toggleOptions);
     }
 
@@ -137,11 +136,11 @@
     }
 
     // Get callback.
-    if (typeof this.options.beforeCallback == 'string' &&
+    if (typeof this.options.beforeCallback === 'string' &&
         window[this.options.beforeCallback] &&
-        typeof window[this.options.beforeCallback] == 'function') {
+        typeof window[this.options.beforeCallback] === 'function') {
       this.options.beforeCallback = window[this.options.beforeCallback].bind(this);
-    } else if (typeof this.options.beforeCallback == 'function') {
+    } else if (typeof this.options.beforeCallback === 'function') {
       this.options.beforeCallback = this.options.beforeCallback.bind(this);
     }
   };
@@ -256,7 +255,7 @@
   Plugin.prototype.toggle = function(state, event) {
     event.stopPropagation();
 
-    if (typeof state != 'boolean') {
+    if (typeof state !== 'boolean') {
       state = !this.isOpen;
     }
 
@@ -266,7 +265,7 @@
     }
 
     if (!this.options.beforeCallback ||
-        (typeof this.options.beforeCallback == 'function' &&
+        (typeof this.options.beforeCallback === 'function' &&
          this.options.beforeCallback(event))) {
       if (state) {
         this.open();
@@ -314,7 +313,7 @@
   Plugin.prototype.closeAll = function(butItself) {
     if (!this.options.independent) {
       $.each(instances[this.options.group], function(uid, instance){
-        if (uid != this.uid) {
+        if (uid !== this.uid) {
           instance.close();
         }
       }.bind(this));
@@ -359,7 +358,7 @@
       } else {
         this.$triggers.addClass(this.options.triggerClass);
       }
-      if (typeof this.options.openedLabel == 'string') {
+      if (typeof this.options.openedLabel === 'string') {
         this.$labels.html(this.options.openedLabel);
       }
     } else {
@@ -367,7 +366,7 @@
       this.$contents.attr('aria-hidden', true);
       this.$triggers.attr('aria-expanded', false);
       this.$triggers.removeClass(this.options.triggerClass);
-      if (typeof this.options.closedLabel == 'string') {
+      if (typeof this.options.closedLabel === 'string') {
         this.$labels.html(this.options.closedLabel);
       }
     }
