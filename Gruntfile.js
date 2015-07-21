@@ -1,28 +1,39 @@
-'use strict';
+"use strict";
 
-module.exports = function(grunt) {
+module.exports = function( grunt ) {
 
-  grunt.initConfig({
+  grunt.initConfig( {
     jshint: {
       options: {
         jshintrc: true
       },
       app: {
         files: {
-          src: ['Gruntfile.js', 'jquery.contenttoggle.js']
+          src: [ "Gruntfile.js", "jquery.contenttoggle.js" ]
+        }
+      }
+    },
+    jscs: {
+      options: {
+        config: ".jscsrc"
+      },
+      app: {
+        files: {
+          src: [ "Gruntfile.js", "jquery.contenttoggle.js" ]
         }
       }
     },
     uglify: {
       app: {
-        files: {'jquery.contenttoggle.min.js': 'jquery.contenttoggle.js'},
+        files: { "jquery.contenttoggle.min.js": "jquery.contenttoggle.js" }
       }
     }
-  });
+  } );
 
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks( "grunt-contrib-jshint" );
+  grunt.loadNpmTasks( "grunt-contrib-uglify" );
+  grunt.loadNpmTasks( "grunt-jscs" );
 
-  grunt.registerTask('default', ['jshint']);
+  grunt.registerTask( "default", [ "jshint", "jscs" ] );
 
 };
