@@ -315,7 +315,7 @@
   Plugin.prototype.closeAll = function( butItself ) {
     if ( !this.options.independent ) {
       $.each( instances[ this.options.group ], function( uid, instance ) {
-        if ( uid !== this.uid ) {
+        if ( Number( uid ) !== this.uid ) {
           instance.close();
         }
       }.bind( this ) );
