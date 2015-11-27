@@ -1,0 +1,1 @@
+$( ".js-contentToggle" ).contentToggle();

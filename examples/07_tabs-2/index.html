@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>jQuery-contentToggle</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="http://cdn.rawgit.com/tonai/jquery-contenttoggle/gh-pages/stylesheets/codepen-base.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  </head>
+  <body>
+
+    <ul class="tabs is-hidden--mobile">
+      <li class="tabs__item js-contentToggle" data-content-selector="#content-1" data-trigger-selector=".js-trigger-1">
+        <button class="tabs__trigger js-trigger-1" type="button">Item 1</button>
+      </li>
+      <li class="tabs__item js-contentToggle" data-content-selector="#content-2" data-trigger-selector=".js-trigger-2">
+        <button class="tabs__trigger js-trigger-2" type="button">Item 2</button>
+      </li>
+      <li class="tabs__item js-contentToggle" data-content-selector="#content-3" data-trigger-selector=".js-trigger-3">
+        <button class="tabs__trigger js-trigger-3" type="button">Item 3</button>
+      </li>
+    </ul>
+    <div class="container">
+      <button class="button js-trigger-1 is-hidden--desktop" type="button">Item 1</button>
+      <div class="content js-contentToggle__content" id="content-1">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pellentesque leo eu libero malesuada, sit amet pretium velit ultrices. Vivamus vitae posuere nisi, volutpat tincidunt turpis. Suspendisse lacus sapien, hendrerit a felis ut, elementum
+          pellentesque magna. Suspendisse potenti. Duis dictum cursus tortor quis rhoncus. Sed condimentum velit non mauris tincidunt placerat. Proin hendrerit rutrum turpis ut lacinia. Nunc tincidunt tempus risus, et molestie nisl vestibulum in. Donec at
+          nunc ligula. Morbi in feugiat nisl. Praesent sed turpis sit amet lectus pulvinar volutpat.</p>
+      </div>
+      <button class="button js-trigger-2 is-hidden--desktop" type="button">Item 2</button>
+      <div class="content is-hidden js-contentToggle__content" id="content-2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum rhoncus aliquam. Suspendisse in erat quis elit fermentum rhoncus ut vitae ipsum. Sed vitae quam magna. Integer eget ipsum eu urna semper condimentum. Mauris interdum quis
+          nulla in efficitur. Suspendisse magna ante, mollis id erat nec, tincidunt vehicula libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin fermentum consequat lectus, vitae vulputate neque fringilla
+          vitae. Integer non convallis lacus. Vestibulum ultrices risus non enim bibendum finibus. Donec scelerisque urna in ultricies auctor. Aliquam non pretium sem, sed dignissim turpis. Phasellus et ornare enim. Nulla vitae porta metus.</p>
+      </div>
+      <button class="button js-trigger-3 is-hidden--desktop" type="button">Item 3</button>
+      <div class="content is-hidden js-contentToggle__content" id="content-3">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque metus vitae neque lobortis tempus. Praesent sed nunc metus. Nulla vitae luctus eros. In dapibus iaculis tellus, vestibulum fermentum libero bibendum non. Integer at scelerisque
+          lorem. Fusce eget fringilla leo, ut placerat mi. Duis vitae pulvinar justo. Fusce ac magna quis arcu pulvinar congue at in diam. Vestibulum sed quam vel risus efficitur rutrum.</p>
+      </div>
+    </div>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="../../jquery.contenttoggle.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
