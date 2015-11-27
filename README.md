@@ -107,9 +107,9 @@ It is not a problem if some elements have already been initialized, elements are
 
 ### Accessibility recommendations
 
-It's preferable to use a `button` with `type="button"` as triggers, because it implicitly gets the button wai-aria role.
+It's preferable to use a `button` with `type="button"` as triggers, because it implicitly gets the `button` wai-aria role.
 
-Following HTML tags are also accepted (they will get the attribute `role="button"`) :
+Following HTML tags are also accepted (they will automatically get the attribute `role="button"`) :
 * a
 * div
 * figure
@@ -129,7 +129,7 @@ More informations on roles [here](http://www.w3.org/TR/html-aria/#document-confo
 
 ### group & data-group
 
-Type: `string`
+Type: `string`  
 Default: is equal to the original jQuery selector used for instantiation, sanitized to keep only following characters : `a-z`, `0-9`, `-` and `_`.
 
 Elements are grouped each other, meaning that only one element can be opened at the same time inside a same group.
@@ -138,7 +138,7 @@ You can't instantiate the plugin twice or more on the same element, for the same
 
 ### independent & data-independent
 
-Type: `boolean`
+Type: `boolean`  
 Default: `false`
 
 If elements inside a group are independent, it breaks the rule of having only one visible content at the same time for a group.
@@ -147,7 +147,7 @@ This is useful for a Frequently Asked Questions list for example.
 
 ### noSelfClosing & data-no-self-closing
 
-Type: `boolean`
+Type: `boolean`  
 Default: `false`
 
 If true the element will not close if the close request comes from itself.
@@ -156,7 +156,7 @@ This option helps for creating tabs style instances.
 
 ### defaultState & data-default-state
 
-Type: `string`
+Type: `string`  
 Default: `null`
 
 Use this option if you want to enforce the default state of an element (`open` or `close`).
@@ -171,7 +171,7 @@ If your elements are not independent, use one `data option` on the element you w
 
 ### globalClose & data-global-close
 
-Type: `boolean`
+Type: `boolean`  
 Default: `false`
 
 When setting this option to `true` a `click` event listener will be added to the `document` with the associated action of closing all elements.
@@ -182,7 +182,7 @@ This is useful for a mobile compatible menu for example.
 
 ### beforeCallback & data-before-callback
 
-Type: `function` or `string`
+Type: `function` or `string`  
 Default: `null`
 
 A function to be called before an action (`toggle`, `open` or `close`).
@@ -195,7 +195,7 @@ If you use a `string` instead of a `function`, the plugin will search for a `fun
 
 ### triggerSelector & data-trigger-selector
 
-Type: `string`
+Type: `string`  
 Default: `.js-contentToggle__trigger`
 
 The selector of the triggers.
@@ -204,7 +204,7 @@ If no elements match, the triggers will be equals to the main element.
 
 ### triggerSelectorContext & data-trigger-selector-context
 
-Type: `boolean`
+Type: `boolean`  
 Default: `true`
 
 If `true` the main element will be used as context for the query selector like this :
@@ -216,7 +216,7 @@ Set it to `false` if you want to use triggers outside of the main element.
 
 ### labelSelector & data-label-selector
 
-Type: `string`
+Type: `string`  
 Default: `null`
 
 The selector of the labels.
@@ -225,56 +225,56 @@ If null, labels are equals to triggers.
 
 ### labelSelectorContext & data-label-selector-context
 
-Type: `boolean`
+Type: `boolean`  
 Default: `true`
 
 Same as [triggerSelectorContext & data-trigger-selector-context](https://github.com/tonai/jquery-contenttoggle#triggerselectorcontext--data-trigger-selector-context) but for labels.
 
 ### contentSelector & data-content-selector
 
-Type: `string`
+Type: `string`  
 Default: `.js-contentToggle__content`
 
 The selector of the contents.
 
 ### contentSelectorContext & data-content-selector-context
 
-Type: `boolean`
+Type: `boolean`  
 Default: `true`
 
 Same as [triggerSelectorContext & data-trigger-selector-context](https://github.com/tonai/jquery-contenttoggle#triggerselectorcontext--data-trigger-selector-context) but for contents.
 
 ### elementClass & data-element-class
 
-Type: `string`
+Type: `string`  
 Default: `is-open`
 
 A class that will be added to the main element when its state is open.
 
 ### triggerClass & data-trigger-class
 
-Type: `string`
+Type: `string`  
 Default: `is-active`
 
 A class that will be added to the active trigger.
 
 ### openedLabel & data-opened-label
 
-Type: `string`
+Type: `string`  
 Default: `null`
 
 If not null, the labels will be updated with that value when the state is opened (HTML allowed).
 
 ### closedLabel & data-closed-label
 
-Type: `string`
+Type: `string`  
 Default: `null`
 
 If not null, the labels will be updated with that value when the state is closed (HTML allowed).
 
 ### toggleProperties & data-toggle-properties
 
-Type: `array` or `string`
+Type: `array` or `string`  
 Default: `[height]`
 
 An array of CSS properties to be toggled.
@@ -287,7 +287,7 @@ If you use a `string` instead of an `array`, the plugin will consider your are p
 
 ### toggleOptions & data-toggle-options
 
-Type: `object` or `string`
+Type: `object` or `string`  
 Default: `{duration: 0}`
 
 The options object to be used as second argument of the jQuery `animate(properties, options)` function.
