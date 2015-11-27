@@ -9,17 +9,18 @@ module.exports = function( grunt ) {
       },
       app: {
         files: {
-          src: [ "Gruntfile.js", "jquery.contenttoggle.js" ]
+          src: [ "Gruntfile.js", "jquery.contenttoggle.js", "examples/*/*.js" ]
         }
       }
     },
     jscs: {
       options: {
-        config: ".jscsrc"
+        config: ".jscsrc",
+        fix: true
       },
       app: {
         files: {
-          src: [ "Gruntfile.js", "jquery.contenttoggle.js" ]
+          src: [ "Gruntfile.js", "jquery.contenttoggle.js", "examples/*/*.js" ]
         }
       }
     },
