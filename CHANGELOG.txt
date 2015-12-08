@@ -1,3 +1,9 @@
+v0.2.2
+  date: 2015-23-08
+  changes:
+    - Strict equality correction.
+    - Add examples.
+
 v0.2.1
   date: 2015-07-23
   changes:
