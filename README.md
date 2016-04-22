@@ -15,7 +15,7 @@ Usage examples :
 
 You can get it with [Bower](http://bower.io/search/?q=jquery-contenttoggle) :
 ```shell
-bower install --save-dev jquery-contenttoggle
+bower install --save jquery-contenttoggle
 ```
 
 Then include the script in your HTML (after jQuery) :
