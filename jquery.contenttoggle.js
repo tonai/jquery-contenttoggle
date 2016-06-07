@@ -284,7 +284,7 @@
     var eventName;
     if ( this.isOpen !== true ) {
       this.isOpen = true;
-      this.do();
+      this.performToggle();
       this.closeAll( true );
       if ( this.options.globalClose ) {
         eventName = isIthing ? "touchstart" : "click";
@@ -301,7 +301,7 @@
   Plugin.prototype.close = function() {
     if ( this.isOpen !== false ) {
       this.isOpen = false;
-      this.do();
+      this.doperformToggle
       $global.off( "." + pluginName + this.uid );
     }
   };
@@ -328,7 +328,7 @@
   /**
    * Perform toggle action.
    */
-  Plugin.prototype.do = function() {
+  Plugin.prototype.performToggle = function() {
     var toggleProperties = {};
     var action = this.isOpen ? "show" : "hide";
 
