@@ -1,3 +1,9 @@
+v0.3.0
+  date: 2016-07-07
+  changes:
+    - Correction for IE8.
+    - Add new stopPropagation option.
+
 v0.2.2
   date: 2015-23-08
   changes:
