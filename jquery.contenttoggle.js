@@ -304,7 +304,7 @@
   Plugin.prototype.close = function() {
     if ( this.isOpen !== false ) {
       this.isOpen = false;
-      this.doperformToggle
+      this.performToggle();
       $global.off( "." + pluginName + this.uid );
     }
   };
