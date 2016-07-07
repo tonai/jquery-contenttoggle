@@ -23,6 +23,7 @@
     independent: false,
     noSelfClosing: false,
     beforeCallback: null,
+    stopPropagation: true,
     triggerSelector: ".js-contentToggle__trigger",
     triggerSelectorContext: true,
     labelSelector: null,
@@ -194,9 +195,11 @@
     }.bind( this ) );
 
     // Bind native events on contents (avoid triggers click event).
-    this.$contents.on( eventName + namespaces, function( event ) {
-      event.stopPropagation();
-    } );
+    if ( this.options.stopPropagation ) {
+      this.$contents.on(eventName + namespaces, function (event) {
+        event.stopPropagation();
+      });
+    }
   };
 
   /**

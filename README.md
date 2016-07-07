@@ -193,6 +193,17 @@ Use `this` inside the callback to refer to the plugin instance.
 
 If you use a `string` instead of a `function`, the plugin will search for a `function` with the given name. This function must be accessible on the global scope.
 
+### stopPropagation & data-stop-propagation
+
+Type: `boolean`  
+Default: `true`
+
+Usefull when your content element is inside your trigger element.
+
+It prevents the content to close itself when the user click inside.
+
+But it can have side effects when you have clickable elements inside your content with JS behaviours.
+
 ### triggerSelector & data-trigger-selector
 
 Type: `string`  
