@@ -39,6 +39,8 @@ There can only be one opened element at the same time inside a group.
 
 When an element will be opened, all other elements will close.
 
+**Important information :** Since jQuery 3, this automatic grouping can not be achieved anymore. [You should use the `group` option](#group--data-group) to group the elements together or they will all be in the same group.
+
 By default the associated contents of an element, that will be toggled, are all elements with the class `js-contentToggle__content` inside the main element.
 
 Example :
@@ -135,6 +137,8 @@ Default: is equal to the original jQuery selector used for instantiation, saniti
 Elements are grouped each other, meaning that only one element can be opened at the same time inside a same group.
 
 You can't instantiate the plugin twice or more on the same element, for the same group.
+
+**Important information :** Since jQuery 3, the automatic grouping can not be achieved anymore. You should probably use this option to define the group and avoid problems when defining other "toggling" elements.
 
 ### independent & data-independent
 
